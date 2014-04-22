@@ -35,5 +35,17 @@ Create the annotation database
 Detect ITDs in normal samples
 
     $ bash sPindel_ITD_inhouse.sh <input short insertions file in Pindel> <input tandem duplications file in Pindel> <output directory> <sample>
+    input short insertions file in Pindel: 
+    input tandem duplications file in Pindel: 
+    output directory: 
+    sample: 
 
-Just type the following command
+Detect somatic ITDs in tumor samples
+
+    $ bash sPindel_ITD_detector.sh <input short insertions file in Pindel> <input tandem duplications file in Pindel> <output directory> <sample> <target inhouse data list> 
+    input short insertions file in Pindel: 
+    input tandem duplications file in Pindel: 
+    output directory: 
+    sample: 
+    target inhouse data list: 
+    
