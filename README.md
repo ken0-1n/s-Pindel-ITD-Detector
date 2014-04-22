@@ -44,11 +44,11 @@ How to run
 2) Detect ITDs in normal samples
 
     $ bash sPindel_ITD_inhouse.sh <_SI file> <_TD file> <output directory> <sample> [sPindel.env]
-    _SI file: it is the output obtained from Pindel
-    _TD file: it is the output obtained from Pindel
-    output directory: output dir name
-    sample: it is used to set the output file prefix and store in inhouse database
-    sPindel.env: optional you can change the config file
+    # _SI file: it is the output obtained from Pindel
+    # _TD file: it is the output obtained from Pindel
+    # output directory: output dir name
+    # sample: it is used to set the output file prefix and store in inhouse database
+    # sPindel.env: optional you can change the config file
     
 3) Create inhouse database
 For filtering out polymorphisms and artifacts that are commonly occured among multiple samples
@@ -64,13 +64,13 @@ Please open the new file and add the paths of "${sample}.inhouse.bed" † files 
 
 4) Detect somatic ITDs in tumor samples
 
-    $ bash sPindel_ITD_detector.sh <_SI file> <_TD file> <output directory> <sample> <target inhouse data list> [sPindel.env]
-    _SI file: it is the output obtained from Pindel
-    _TD file: it is the output obtained from Pindel
-    output directory: output dir name
-    sample: it is used to set the output file prefix and deselect the same sample from inhouse database
-    target inhouse data list: list of inhouse bed created on "3) Create inhouse database"    
-    sPindel.env: optional you can change the config file
+    $ bash sPindel_ITD_detector.sh <_SI file> <_TD file> <output directory> <sample> <inhouse data list> [sPindel.env]
+    # _SI file: it is the output obtained from Pindel
+    # _TD file: it is the output obtained from Pindel
+    # output directory: output dir name
+    # sample: it is used to set the output file prefix and deselect the same sample from inhouse database
+    # inhouse data list: list of inhouse bed created on "3) Create inhouse database"    
+    # sPindel.env: optional you can change the config file
 Output
 ---
 
