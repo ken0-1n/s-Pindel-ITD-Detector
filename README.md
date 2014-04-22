@@ -71,3 +71,85 @@ Detect somatic ITDs in tumor samples
     sample: 
     target inhouse data list: 
     [sPindel.env]
+
+
+Output
+---
+
+The results are formatted as TSV format.
+
+The followings are the information of the columns of the output file:   
+
+<table>
+<tr>
+<th>chr</th>
+<td>The chromosome of ITD breakpoint.</td>  
+</tr>
+<tr>
+<th>start</th>
+<td>The start position of breakpoint.</td>
+</tr>
+<tr>
+<th>end</th>
+<td>The start position of breakpoint.</td>  
+</tr>
+<tr>
+<th>itd_length</th>
+<td>The lengths of ITD.</td>    
+</tr>
+<tr>
+<th>support</th>
+<td>The total supported reads.</td>   
+</tr>
+<tr>
+<th>support_uniq</th>
+<td>The total unique supported reads.</td>   
+</tr>
+<tr>
+<th>support_+,support_-</th>
+<td>The ratio of the supported reads aligned to positive strand.</td>   
+</tr>
+<tr>
+<th>support_uniq_+,support_uniq_-</th>
+<td>The ratio of the unique supported reads aligned to positive strand.</td>   
+</tr>
+<tr>
+<th>itd_contig</th>
+<td>Unmapped parts of contig sequences.</td>
+</tr>
+<tr>
+<th>contig</th>
+<td>The contig sequences by supported reads.</td>
+</tr>
+<tr>
+<th>exon<br>intron<br>5putr<br>3putr<br>noncoding_exon<br>noncoding_intron</th>
+<td>RefSeq Gene Name and Gene ID annotation.</td>   
+</tr>
+<tr>
+<th>ens_gene</th>
+<td>Ensamble Gene ID annotation.</td>  
+</tr>
+<tr>
+<th>known_gene</th>
+<td>Known Gene ID annotation.</td>  
+</tr>
+<tr>
+<th>tandem_repeat</th>
+<td>Simple Repeat annotation.</td>  
+</tr>
+<tr>
+<th>inhouse</th>
+<td>The results of matching ITD to inhouse database.</td>       
+</tr>
+</table>
+
+Copyright
+----------
+Copyright (c) 2013, Kenichi Chiba, Yuichi Shiraishi
+
+Redistribution and use in source and binary forms, with or without modification, are permitted provided that the following conditions are met:
+  * Redistributions of source code must retain the above copyright notice, this list of conditions and the following disclaimer.
+  * Redistributions in binary form must reproduce the above copyright notice, this list of conditions and the following disclaimer in the documentation and/or other materials provided with the distribution.
+
+"THIS SOFTWARE IS PROVIDED BY THE COPYRIGHT HOLDERS AND CONTRIBUTORS "AS IS" AND ANY EXPRESS OR IMPLIED WARRANTIES, INCLUDING, BUT NOT LIMITED TO, THE IMPLIED WARRANTIES OF MERCHANTABILITY AND FITNESS FOR A PARTICULAR PURPOSE ARE DISCLAIMED. IN NO EVENT SHALL THE COPYRIGHT HOLDER OR CONTRIBUTORS BE LIABLE FOR ANY DIRECT, INDIRECT, INCIDENTAL, SPECIAL, EXEMPLARY, OR CONSEQUENTIAL DAMAGES (INCLUDING, BUT NOT LIMITED TO, PROCUREMENT OF SUBSTITUTE GOODS OR SERVICES; LOSS OF USE, DATA, OR PROFITS; OR BUSINESS INTERRUPTION) HOWEVER CAUSED AND ON ANY THEORY OF LIABILITY, WHETHER IN CONTRACT, STRICT LIABILITY, OR TORT (INCLUDING NEGLIGENCE OR OTHERWISE) ARISING IN ANY WAY OUT OF THE USE OF THIS SOFTWARE, EVEN IF ADVISED OF THE POSSIBILITY OF SUCH DAMAGE. 
+
