@@ -1,0 +1,1 @@
+chr	start	end	itd_length	support	support_uniq	support_+	support_uniq_+	support_-	support_uniq_-	itd_contig	contig	exon	intron	5putr	3putr	noncoding exon	noncoding intron	ens gene	known gene	tandem repeat	inhouse
