@@ -54,11 +54,11 @@ Create inhouse database
 For filtering out polymorphisms and artifacts that are commonly occured among multiple samples
 Please open the new file and add the paths of "${sample}.inhouse.bed" † files for each of control samples. For example,   
 
-    $ /home/your_username/s-Pindel-ITD-Detector-master/sample001.inhouse.bed
-    $ /home/your_username/s-Pindel-ITD-Detector-master/sample002.inhouse.bed
-    $ /home/your_username/s-Pindel-ITD-Detector-master/sample003.inhouse.bed
+    $ /home/your_username/s-Pindel-ITD-Detector-master/inhouse/sample001.inhouse.bed
+    $ /home/your_username/s-Pindel-ITD-Detector-master/inhouse/sample002.inhouse.bed
+    $ /home/your_username/s-Pindel-ITD-Detector-master/inhouse/sample003.inhouse.bed
     …
-    $ /home/your_username/s-Pindel-ITD-Detector-master/sample099.inhouse.bed
+    $ /home/your_username/s-Pindel-ITD-Detector-master/inhouse/sample099.inhouse.bed
     
 † The file "${sample}.inhouse.bed" is the file which contains the outputs obtained from sPindel_ITD_inhouse.sh   
 
