@@ -34,6 +34,6 @@ Create the annotation database
 
 Detect ITDs in normal samples
 
-    $ bash sPindel_ITD_inhouse_data_maker.sh <input short insertions file in Pindel> <input tandem duplications file in Pindel> <output directory> <sample>
+    $ bash sPindel_ITD_inhouse.sh <input short insertions file in Pindel> <input tandem duplications file in Pindel> <output directory> <sample>
 
 Just type the following command
