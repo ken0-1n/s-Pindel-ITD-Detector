@@ -1,7 +1,7 @@
 s-Pindel-ITD-Detector
 ==================
 
-s-Pindel-ITD-Detector is a framework for the detection of somatic ITDs using Pindel
+s-Pindel-ITD-Detector is a framework for the detection of somatic ITDs using Pindel output files.
 
 Dependecy
 ----------
