@@ -60,7 +60,7 @@ Please open the new file and add the paths of "${sample}.inhouse.bed" † files 
     …
     $ /home/your_username/s-Pindel-ITD-Detector-master/inhouse/sample099.inhouse.bed
     
-† The file "${sample}.inhouse.bed" is the file which contains the outputs obtained from sPindel_ITD_inhouse.sh   
+† The file "${sample}.inhouse.bed" is the outputs obtained from sPindel_ITD_inhouse.sh   
 
 Detect somatic ITDs in tumor samples
 
