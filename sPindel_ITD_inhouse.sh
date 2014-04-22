@@ -13,7 +13,7 @@ SPINDEL_ENV=$5
 
 write_usage() {
   echo ""
-  echo "Usage: `basename $0` <input short insertions file> <input tandem duplications file> <output directory> <target inhouse list> [<sPindel.env>]"
+  echo "Usage: `basename $0` <input short insertions file> <input tandem duplications file> <output directory> <sample> [<sPindel.env>]"
   echo ""
 }
 
