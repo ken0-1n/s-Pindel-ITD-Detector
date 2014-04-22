@@ -5,7 +5,7 @@ s-Pindel-ITD-Detector is a framework for the detection of somatic ITDs using Pin
 
 Pindelのoutput fileである"Short Insertions file(_SI)","Tandem duplications file(_TD)"からsomaticなITDを選択し一覧として出力します。
 
-Pindelの実行時の注意事項
+*Pindelの実行時の注意事項
 Pindel実行時にはBAMファイルを複数指定しないでください。
 BAMファイルを複数指定しないで、Pindelを実行して結果のみthis framework で利用することができます。
 
