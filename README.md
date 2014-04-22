@@ -22,8 +22,17 @@ SetUp
 3. Download the refGene.txt, knownGene.txt, ensGene.txt and simpleRepeat.txt files from **the UCSC site** and place them under the s-Pindel-ITD-Detector/db directory, and then unpack them.  
 
 4. Open sPindel.env and set each entry.  
-**PATH_TO_BED_TOOLS**: the path to the BEDtools executable  
-**PATH_TO_FASTA**: the path to the fasta36 executable  
+<table>
+<tr>
+<th>PATH_TO_FASTA</th>
+<td>the path to the fasta36 executable</td>  
+</tr>
+<tr>
+<th>PATH_TO_BED_TOOLS</th>
+<td>the path to the BEDtools executable</td>  
+</tr>
+</table>
+
 
 How to run
 ---
