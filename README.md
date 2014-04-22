@@ -3,14 +3,18 @@ s-Pindel-ITD-Detector
 
 s-Pindel-ITD-Detector is a framework for the detection of somatic ITDs using Pindel output files, "Short Insertions file(_SI)" and "Tandem duplications file(_TD)".
 
-*Pindelの実行時の注意事項  
-Pindel実行時にはBAMファイルを複数指定しないでください。
-BAMファイルを1つだけ指定してPindelを実行した結果のみthis framework で利用することができます。
+*Restrictions on performing the Pindel
+When you run the Pindel, please use the bam config file that lists only one BAM file.
 
 For example,   
 
+    # bam config file
+    $ /home/user_name/input/tumor/tumor.bam 300 output/sample001
+        
+    # run the pindel
+    $ ./pindel -f ./hg19.fasta -i ${bam config file} -c ALL -o $prefix
 
-Pindelの利用については、PindelのWeb siteをご覧になってください。
+For additional information about Pindel, please visit their website at [http://gmt.genome.wustl.edu/pindel/0.2.4/index.html](http://gmt.genome.wustl.edu/pindel/0.2.4/index.html)
 
 
 Dependecy
