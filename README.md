@@ -91,7 +91,7 @@ The followings are the information of the columns of the output file:
 </tr>
 <tr>
 <th>end</th>
-<td>The start position of breakpoint.</td>  
+<td>The end position of breakpoint.</td>  
 </tr>
 <tr>
 <th>itd_length</th>
@@ -107,11 +107,11 @@ The followings are the information of the columns of the output file:
 </tr>
 <tr>
 <th>support_+<br>support_-</th>
-<td>The ratio of the supported reads aligned to positive strand.</td>   
+<td>The ratio of the supported reads aligned to positive(negative) strand.</td>   
 </tr>
 <tr>
 <th>support_uniq_+<br>support_uniq_-</th>
-<td>The ratio of the unique supported reads aligned to positive strand.</td>   
+<td>The ratio of the unique supported reads aligned to positive(negative) strand.</td>   
 </tr>
 <tr>
 <th>itd_contig</th>
