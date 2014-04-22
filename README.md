@@ -106,11 +106,11 @@ The followings are the information of the columns of the output file:
 <td>The total unique supported reads.</td>   
 </tr>
 <tr>
-<th>support_+,support_-</th>
+<th>support_+<br>support_-</th>
 <td>The ratio of the supported reads aligned to positive strand.</td>   
 </tr>
 <tr>
-<th>support_uniq_+,support_uniq_-</th>
+<th>support_uniq_+<br>support_uniq_-</th>
 <td>The ratio of the unique supported reads aligned to positive strand.</td>   
 </tr>
 <tr>
