@@ -7,7 +7,13 @@ Pindelのoutput fileである"Short Insertions file(_SI)","Tandem duplications f
 
 *Pindelの実行時の注意事項  
 Pindel実行時にはBAMファイルを複数指定しないでください。
-BAMファイルを複数指定しないで、Pindelを実行して結果のみthis framework で利用することができます。
+BAMファイルを1つだけ指定してPindelを実行した結果のみthis framework で利用することができます。
+
+For example,   
+
+
+Pindelの利用については、PindelのWeb siteをご覧になってください。
+
 
 Dependecy
 ----------
