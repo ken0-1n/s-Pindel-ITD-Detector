@@ -37,11 +37,11 @@ SetUp
 How to run
 ---
 
-1. Create the annotation database
+1) Create the annotation database
 
     $ bash createAnnoDB.sh
 
-2. Detect ITDs in normal samples
+2) Detect ITDs in normal samples
 
     $ bash sPindel_ITD_inhouse.sh <input short insertions file in Pindel> <input tandem duplications file in Pindel> <output directory> <sample> [sPindel.env]
     input short insertions file in Pindel: 
@@ -50,7 +50,7 @@ How to run
     sample: 
     [sPindel.env]
     
-3. Create inhouse database
+3) Create inhouse database
 For filtering out polymorphisms and artifacts that are commonly occured among multiple samples
 Please open the new file and add the paths of "${sample}.inhouse.bed" † files for each of control samples. For example,   
 
@@ -62,7 +62,7 @@ Please open the new file and add the paths of "${sample}.inhouse.bed" † files 
     
 † The file "${sample}.inhouse.bed" is the outputs obtained from sPindel_ITD_inhouse.sh   
 
-4. Detect somatic ITDs in tumor samples
+4) Detect somatic ITDs in tumor samples
 
     $ bash sPindel_ITD_detector.sh <input short insertions file in Pindel> <input tandem duplications file in Pindel> <output directory> <sample> <target inhouse data list> [sPindel.env]
     input short insertions file in Pindel: 
