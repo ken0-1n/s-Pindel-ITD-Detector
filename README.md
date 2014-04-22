@@ -43,10 +43,13 @@ How to run
 
 2) Detect ITDs in normal samples
 
-    $ bash sPindel_ITD_inhouse.sh <_SI file output by Pindel> <_TD file output by Pindel> <output directory> <sample> [sPindel.env]
-    *_SI file output by Pindel: input short insertions file (_SI) output by Pindel
-    *_TD file output by Pindel: input tandem duplications file (_TD) output by Pindel
-
+    $ bash sPindel_ITD_inhouse.sh <_SI file> <_TD file> <output directory> <sample> [sPindel.env]
+    _SI file: it is the output obtained from Pindel
+    _TD file: it is the output obtained from Pindel
+    output directory: output dir name
+    sample: it is used to set the output file prefix and store in inhouse database
+    sPindel.env: optional you can change the config file
+    
 3) Create inhouse database
 For filtering out polymorphisms and artifacts that are commonly occured among multiple samples
 Please open the new file and add the paths of "${sample}.inhouse.bed" † files for each of control samples. For example,   
@@ -61,15 +64,13 @@ Please open the new file and add the paths of "${sample}.inhouse.bed" † files 
 
 4) Detect somatic ITDs in tumor samples
 
-    $ bash sPindel_ITD_detector.sh <_SI file output by Pindel> <_TD file output by Pindel> <output directory> <sample> <target inhouse data list> [sPindel.env]
-    input short insertions file in Pindel: 
-    input tandem duplications file in Pindel: 
-    output directory: 
-    sample: 
-    target inhouse data list: 
-    [sPindel.env]
-
-
+    $ bash sPindel_ITD_detector.sh <_SI file> <_TD file> <output directory> <sample> <target inhouse data list> [sPindel.env]
+    _SI file: it is the output obtained from Pindel
+    _TD file: it is the output obtained from Pindel
+    output directory: output dir name
+    sample: it is used to set the output file prefix and deselect the same sample from inhouse database
+    target inhouse data list: list of inhouse bed created on "3) Create inhouse database"    
+    sPindel.env: optional you can change the config file
 Output
 ---
 
