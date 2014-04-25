@@ -1,10 +1,10 @@
 s-Pindel-ITD-Detector
 ==================
 
-s-Pindel-ITD-Detector is a framework for the detection of somatic ITDs using Pindel output files, "Short Insertions file(_SI)" and "Tandem duplications file(_TD)".
+s-Pindel-ITD-Detector is a framework for the detection of somatic ITDs using the Pindel output files, "Short Insertions file(_SI)" and "Tandem duplications file(_TD)".
 
-**Restrictions on performing the Pindel**   
-When you run the Pindel, please use the bam config file that lists only one BAM file. For example,   
+**Restrictions on performing Pindel**   
+When you run Pindel, please use the BAM config file that lists only one BAM file. For example,   
 
     # bam config file (only one line)
     $ /home/user_name/input/tumor/tumor.bam 300 output/sample001
@@ -27,7 +27,7 @@ SetUp
 
 1. Download the s-Pindel-ITD-Detector package to any directory.
 
-2. Download and extract and install following external tools to any directory.  
+2. Download, extract and install the following two external tools to any directory.  
   **bedtools** (Ver. 2.14.3).  
   **fasta36** (Ver. 3.5c).  
 
@@ -53,7 +53,7 @@ How to run
 
     $ bash createAnnoDB.sh
 
-2) Detect ITDs in normal samples
+2) Detect ITDs in control samples
 
     $ bash sPindel_ITD_inhouse.sh <_SI file> <_TD file> <output directory> <sample> [sPindel.env]
     # _SI file: it is the output obtained from Pindel
@@ -62,9 +62,8 @@ How to run
     # sample: it is used to set the output file prefix and store in inhouse database
     # sPindel.env: optional you can change the config file
     
-3) Create inhouse database
-For filtering out polymorphisms and artifacts that are commonly occured among multiple samples
-Please open the new file and add the paths of "${sample}.inhouse.bed" † files for each of control samples. For example,   
+3) Create inhouse database  
+Please open the new file and add the paths of "${sample}.inhouse.bed" files† for each of control samples. For example,   
 
     $ /home/your_username/s-Pindel-ITD-Detector-master/inhouse/sample001.inhouse.bed
     $ /home/your_username/s-Pindel-ITD-Detector-master/inhouse/sample002.inhouse.bed
@@ -72,7 +71,7 @@ Please open the new file and add the paths of "${sample}.inhouse.bed" † files 
     …
     $ /home/your_username/s-Pindel-ITD-Detector-master/inhouse/sample099.inhouse.bed
     
-† The file "${sample}.inhouse.bed" is the outputs obtained from sPindel_ITD_inhouse.sh   
+† The file "${sample}.inhouse.bed" is included in the outputs obtained from sPindel_ITD_inhouse.sh   
 
 4) Detect somatic ITDs in tumor samples
 
@@ -89,43 +88,38 @@ Output
 The results are formatted as TSV format.
 
 The followings are the information of the columns of the output file:   
-
+The definitions from "chr" to "contig" are same as those in Pindel
 <table>
 <tr>
 <th>chr</th>
-<td>The chromosome of ITD breakpoint.</td>  
+<td>The identifier of the chromosome the read was found on.</td>  
 </tr>
 <tr>
-<th>start</th>
-<td>The start position of breakpoint.</td>
+<th>start<br>end</th>
+<td>The start and end positions of the SV.</td>
 </tr>
-<tr>
-<th>end</th>
-<td>The end position of breakpoint.</td>  
-</tr>
-<tr>
 <th>itd_length</th>
-<td>The lengths of ITD.</td>    
+<td>The length of the SV.</td>    
 </tr>
 <tr>
 <th>support</th>
-<td>The total supported reads.</td>   
+<td>The number of reads supporting the SV.</td>   
 </tr>
 <tr>
 <th>support_uniq</th>
-<td>The total unique supported reads.</td>   
+<td>The number of unique reads supporting the SV (so not counting duplicate reads).</td>   
 </tr>
 <tr>
-<th>support_+<br>support_-</th>
-<td>The ratio of the supported reads aligned to positive(negative) strand.</td>   
+<th>support_+<br>support_uniq_+</th>
+<td>Total number of supporting reads and unique number of supporting reads whose anchors are upstream of the SV.</td>
 </tr>
 <tr>
-<th>support_uniq_+<br>support_uniq_-</th>
-<td>The ratio of the unique supported reads aligned to positive(negative) strand.</td>   
+<th>support_-<br>support_uniq_-</th>
+<td>Total number of supporting reads and unique number of supporting reads whose anchors are downstream of the SV.</td>   
 </tr>
 <tr>
 <th>itd_contig</th>
-<td>Unmapped parts of contig sequences.</td>
+<td>The sequence(s) of the NT fragment(s)</td>
 </tr>
 <tr>
 <th>contig</th>
